@@ -9,7 +9,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090503075015) do
+ActiveRecord::Schema.define(:version => 20090505114649) do
+
+  create_table "pages", :force => true do |t|
+    t.string  "title"
+    t.integer "local_id"
+    t.integer "total_backlink_count"
+    t.integer "direct_link_id"
+    t.integer "repository_id"
+    t.integer "chain_without_loop_length"
+    t.boolean "redirect"
+  end
 
   create_table "repositories", :force => true do |t|
     t.datetime "created_at"

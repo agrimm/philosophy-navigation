@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  local_id: 1
+  total_backlink_count: 1
+  direct_link_id: 1
+  repository_id: 1
+  chain_without_loop_length: 1
+  redirect: false
+
+two:
+  title: MyString
+  local_id: 1
+  total_backlink_count: 1
+  direct_link_id: 1
+  repository_id: 1
+  chain_without_loop_length: 1
+  redirect: false
