@@ -1,14 +1,10 @@
-Title: <%= @page.title %><p />
+<%= render(:partial => "main_page", :object => @page) %>
 
 Backlinks:
-<% @backlinks.each do |backlink| %>
-  <%= link_to(backlink.title, :controller => "pages", :repository_id => @repository, :id => backlink, :action=>"show") %>
-<% end %>
+<%= render(:partial => "other_page", :collection => @backlinks) %>
 <p />
 
 Link chain:
-<% @link_chain[1..-1].each do |link_chain_page| %>
-  <%= link_to(link_chain_page.title, :controller => "pages", :repository_id => @repository, :id => link_chain_page, :action=>"show") %>
-<% end %>
+<%= render(:partial => "other_page", :collection => @link_chain[1..-1]) %>
 <p />
 

@@ -10,7 +10,7 @@ class PagesController < ApplicationController
 
   def show
     @page = Page.find(params[:id])
-    @backlinks = @page.backlinks
+    @backlinks = @page.backlinks.sort_by {|p| -p.total_backlink_count}
     @repository = Repository.find(params[:repository_id])
     @link_chain = @page.link_chain
 
